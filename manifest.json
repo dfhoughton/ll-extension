@@ -2,15 +2,44 @@
   "manifest_version": 2,
 
   "name": "Memnon",
-  "description": "",
+  "description": "A language learning memory assistant.",
   "version": "0.1",
+  "version_name": "alpha",
+  "author": "David F. Houghton",
 
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_title": "memory assistant"
+  },
+
+  "icons": {
+    "16": "images/owl16.png",
+    "19": "icon.png",
+    "32": "images/owl32.png",
+    "48": "images/owl48.png",
+    "128": "images/owl128.png"
+  },
+
+  "background": {
+    "scripts": ["scripts/commands.js"],
+    "persistent": false
+  },
+
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "css": ["style.css"],
+    "js": ["scripts/jquery-3.2.1.min.js", "scripts/content.js"]
+  }],
+
+  "commands": {
+    "wake-up": {
+      "suggested_key": { "default": "Ctrl+Shift+Space" },
+      "description": "Notify the extension that you want to note the highlighted text."
+    }
   },
 
   "permissions": [
+    "tabs",
     "activeTab"
   ]
 }
