@@ -9,7 +9,7 @@ chrome.commands.onCommand.addListener(function(command) {
 // just notify the active tab that it should attend to things
 function wakeUp() {
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    const tab = tabs[0];
-    chrome.tabs.sendMessage(tab.id, true, function(response){});
+    const msg = 'wake-up';
+    chrome.tabs.sendMessage(tabs[0].id, msg, function(response){});
   });
 }

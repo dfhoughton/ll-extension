@@ -8,13 +8,13 @@
   "author": "David F. Houghton",
 
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "images/owl19.png",
     "default_title": "memory assistant"
   },
 
   "icons": {
     "16": "images/owl16.png",
-    "19": "icon.png",
+    "19": "images/owl19.png",
     "32": "images/owl32.png",
     "48": "images/owl48.png",
     "128": "images/owl128.png"
@@ -40,6 +40,13 @@
 
   "permissions": [
     "tabs",
-    "activeTab"
+    "activeTab",
+    "https://fonts.googleapis.com/",
+    "http://fonts.gstatic.com/"
+  ],
+
+  "web_accessible_resources": [
+    "images/*.png",
+    "fonts/*"
   ]
 }

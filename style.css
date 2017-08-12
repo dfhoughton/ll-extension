@@ -1,4 +1,45 @@
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Lora-Regular.ttf');
+}
+
 /* all extension-specific page elements must be under the #_ll node */
 #_ll {
+  z-index: 100;
+  position: absolute;
+  padding: 0.75rem;
+  font-family: 'Segoe UI', 'Helvetica', sans-serif;
+  font-size:  14px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  max-width: 600px;
+  background-color: white;
+}
 
+#_ll .head {
+  width:  100%;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size:  25px;
+  border-bottom:  0.5rem;
+}
+
+#_ll .selected {
+  display: table;
+  margin: .5rem auto;
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  background-color: #c8e1ff;
+}
+
+#_ll .x {
+  float: right;
+}
+#_ll .x:hover {
+  cursor: pointer;
 }
